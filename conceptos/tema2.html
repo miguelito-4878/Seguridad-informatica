@@ -14,12 +14,176 @@
 		<main>
 			<section id="informacion">
 				<div class="contenedor">
-					<h2>TEMA 2</h2>
-					<br>
-					<p align=justify><img src="img/img.jpg" align=left>eN LA SIGUIENTE SOPA DE
-					LETRAS ENCONTRARAS PALBRAS RELACIONADAS CON LA SEGURIDAD INFORMATICA, 
-					RIESGOS Y CONSECUENCIAS DE LA MALA PRACTICA DE LOS PROTOCOLOS Y MEDIDAS DE
-					SEGURIDAD AL MANUULAT INFORMACION.<br><br>
+					<h2>FIREWALLS</h2>
+					<p>Quizás uno de los elementos más publicitados a la hora de establecer seguridad, sean estos elementos. Aunque deben ser uno de los sistemas a los que
+					más se debe prestar atención, distan mucho de ser la solución final a los problemas de seguridad.
+					Los Firewalls están diseñados para proteger una red interna contra los accesos no autorizados. En efecto , un firewall es un Gateway con un bloqueo (la
+					puerta bloqueada solo se abre para los paquetes de información que pasan una o varias inspecciones de seguridad), estos aparatos solo lo utilizan las
+					grandes corporaciones
+					Un gateway (puerta de enlace) es un dispositivo, con frecuencia un ordenador, que permite interconectar redes con protocolos y
+					arquitecturas diferentes a todos los niveles de comunicación. Su propósito es traducir la información del protocolo utilizado en una
+					red al protocolo usado en la red de destino. Es normalmente un equipo informático configurado para dotar a las máquinas de una
+					red local (LAN) conectadas a él de un acceso hacia una red exterior
+					Un Firewall es un sistema (o conjunto de ellos) ubicado entre dos redes y que ejerce la una política de seguridad establecida. Es el mecanismo encargado
+					de proteger una red confiable de una que no lo es (por ejemplo Internet).
+					Puede consistir en distintos dispositivos, tendientes a los siguientes objetivos:
+					Todo el tráfico desde dentro hacia fuera, y viceversa, debe pasar a través de él.
+					Sólo el tráfico autorizado, definido por la política local de seguridad, es permitido.
+					Como puede observarse, el Muro Cortafuegos, sólo sirven de defensa perimetral de las redes, no defienden de ataques o errores provenientes del
+					interior, como tampoco puede ofrecer protección una vez que el intruso lo traspasa.
+					Algunos Firewalls aprovechan esta capacidad de que toda la información entrante y saliente debe pasar a través de ellos para proveer servicios de
+					seguridad adicionales como la encriptación del tráfico de la red. Se entiende que si dos Firewalls están conectados, ambos deben "hablar" el mismo
+					método de encriptacióndesencriptación para entablar la comunicación
+					<h3>Tipos de Firewall</h3>
+					<ul>
+					<li>
+					<p>Filtrado de Paquetes</p>
+					</li>
+					<li>
+					<p>ProxyGateways de Aplicaciones</p>
+					</li>
+					<li>
+					<p>DualHomed Host</p>
+					</li>
+					<li>
+					<p>Screened Host</p>
+					</li>
+					<li>
+					<p>Screened Subnet</p>
+					</li>
+					<li>
+					<p>Inspección de Paquetes</p>
+					</li>
+					</ul>
+					
+					Este tipo de Firewalls se basa en el principio de que cada paquete que circula por la red es inspeccionado, así como también su procedencia y destino. Se
+					aplican desde la capa de Red hasta la de Aplicaciones. Generalmente son instalados cuando se requiere seguridad sensible al contexto y en aplicaciones
+					muy complejas.
+					<ul>
+					<li>
+					<p>Firewalls Personales :Estos Firewalls son aplicaciones disponibles para usuarios finales que desean conectarse a una red externa insegura y
+					mantener su computadora a salvo de ataques que puedan ocasionarle desde un simple "cuelgue" o infección de virus hasta la pérdida de toda su
+					información almacenada </p>
+					</li>
+					<li>
+					<p>Filtrado de paquetes: El filtrado de paquetes mediante puertos y protocolos permite establecer que servicios estarán disponibles al usuario y
+					por cuales puertos. Se puede permitir navegar en la WWW (puerto 80 abierto) pero no acceder a la transferencia de archivos vía FTP (puerto 21
+					cerrado) </p>
+					</li>
+					</ul>
+					
+					Debido a su funcionamiento y estructura basada en el filtrado de direcciones y puertos este tipo de Firewalls trabajan en los niveles de Transporte y de
+					Red del Modelo OSI y están conectados a ambos perímetros (interior y exterior) de la red.<br>
+					Tienen la ventaja de ser económicos, tienen un alto nivel de desempeño y son transparentes para los usuarios conectados a la red. Sin embargo presenta
+					debilidades como:
+					<ul>
+					<li>
+					<p>No protege las capas superiores a nivel OSI.</p>
+					</li>
+					<li>
+					<p>Las necesidades aplicativas son difíciles de traducir como filtros de protocolos y puertos.</p>
+					</li>
+					<li>
+					<p>No son capaces de esconder la topología de redes privadas, por lo que exponen la red al mundo exterior.</p>
+					</li>
+					<li>
+					<p>Sus capacidades de auditoría suelen ser limitadas, al igual que su capacidad de registro de actividades.</p>
+					</li>
+					<li>
+					<p>No soportan políticas de seguridad complejas como autentificación de usuarios y control de accesos con horarios prefijados.</p>
+					</li>
+					<li>
+					<p>ProxyGateways
+					de Aplicaciones: Para evitar las debilidades asociadas al filtrado de paquetes, los desarrolladores crearon software de
+					aplicación encargados de filtrar las conexiones. Estas aplicaciones son conocidas como Servidores Proxy y la máquina donde se ejecuta recibe el
+					nombre de Gateway de Aplicación o Bastion Host.</p>
+					</li>
+					</ul>
+					
+					El Proxy, instalado sobre el Nodo Bastión, actúa de intermediario entre el cliente y el servidor real de la aplicación, siendo transparente a
+					ambas partes. Cuando un usuario desea un servicio, lo hace a través del Proxy. Este, realiza el pedido al servidor real devuelve los resultados
+					al cliente. Su función fue la de analizar el tráfico de red en busca de contenido que viole la seguridad de la misma.
+					<h4>DualHomed Host : </h4>
+					Son dispositivos que están conectados a ambos perímetros (interior y exterior) y no dejan pasar paquetes IP (como sucede
+					en el caso del Filtrado de Paquetes), por lo que se dice que actúan con el "IPForwarding desactivado".
+					Un usuario interior que desee hacer uso de un servicio exterior, deberá conectarse primero al Firewall, donde el Proxy atenderá su petición, y en función
+					de la configuración impuesta en dicho Firewall, se conectará al servicio exterior solicitado y hará de puente entre este y el usuario interior.
+					Es decir que se utilizan dos conexiones. Uno desde la máquina interior hasta el Firewall y el otro desde este hasta la máquina que albergue el servicio
+					exterior.
+					<h4>Screened Host :</h4>
+					 En este caso se combina un Router con un host bastión y el principal nivel de seguridad proviene del filtrado de paquetes. En el
+					bastión, el único sistema accesible desde el exterior, se ejecuta el Proxy de aplicaciones y en el Choke se filtran los paquetes considerados
+					peligrosos y sólo se permiten un número reducido de servicios.
+					<h4>Screened Subnet:</h4>
+					En este diseño se intenta aislar la máquina más atacada y vulnerable del Firewall, el Nodo Bastión. Para ello se establece una
+					Zona Desmilitarizada (DMZ) de forma tal que sin un intruso accede a esta máquina no consiga el acceso total a la subred protegida.
+					En este esquema se utilizan dos Routers: uno exterior y otro interior. El Router exterior tiene la misión de bloquear el tráfico no deseado en ambos
+					sentidos: hacia la red interna y hacia la red externa. El Router interior hace lo mismo con la red interna y la DMZ (zona entre el Router externo y el
+					interno).
+					Es posible definir varias niveles de DMZ agregando más Routers, pero destacando que las reglas aplicadas a cada uno deben ser distintas ya que en caso
+					contrario los niveles se simplificarían a uno solo.Como puede apreciarse la Zona Desmilitarizada aísla físicamente los servicios internos, separándolos de los servicios públicos. Además, n o existe una
+					conexión directa entre la red interna y la externa. Los sistemas DualHomed
+					Host y Screnned pueden ser complicados de configurar y comprobar, lo que puede dar lugar, paradójicamente, a importantes agujeros de seguridad en toda la red. En cambio, si se encuentran bien configurados y administrados
+					pueden brindar un alto grado de protección y ciertas ventajas:
+					<ul>
+					<li>
+					<p>Ocultamiento de la información: los sistemas externos no deben conocer el nombre de los sistemas internos. El Gateway de aplicaciones es el único
+					autorizado a conectarse con el exterior y el encargado de bloquear la información no solicitada o sospechosa.</p>
+					</li>
+					<li>
+					<p>Registro de actividades y autenticación robusta: El Gateway requiere de autenticación cuando se realiza un pedido de datos externos. El registro de
+					actividades se realiza en base a estas solicitudes.</p>
+					</li>
+					<li>
+					<p>Reglas de filtrado menos complejas: Las reglas del filtrado de los paquetes por parte del Router serán menos compleja dado a que él sólo debe
+					atender las solicitudes del Gateway.</p>
+					</li>
+					</ul>
+					
+					Así mismo tiene la desventaja de ser intrusivos y no transparentes para el usuario ya que generalmente este debe instalar algún tipo de aplicación
+					especializada para lograr la comunicación. Se suma a esto que generalmente son más lentos porque deben revisar todo el tráfico de la red.
+					Restricciones en el Firewall
+					La parte más importante de las tareas que realizan los Firewalls, la de permitir o denegar determinados servicios, se hacen en función de los distintos
+					usuarios y su ubicación:
+					<ul>
+					<li>
+					<p>Usuarios internos con permiso de salida para servicios restringidos: permite especificar una serie de redes y direcciones a los que denomina
+					Trusted (validados) . Estos usuarios, cuando provengan del interior, van a poder acceder a determinados servicios externos que se han definido.</p>
+					</li>
+					<li>
+					<p>Usuarios externos con permiso de entrada desde el exterior: este es el caso más sensible a la hora de vigilarse. Suele tratarse de usuarios externos
+					que por algún motivo deben acceder para consultar servicios de la red interna.</p>
+					</li>
+					</ul>
+					
+					
+					También es habitual utilizar estos accesos por parte de terceros para prestar servicios al perímetro interior de la red. Sería conveniente que estas cuentas
+					sean activadas y desactivadas bajo demanda y únicamente el tiempo que sean necesarias.
+					<h4>Beneficios de un Firewall</h4> 
+					Los Firewalls manejan el acceso entre dos redes, y si no existiera, todos las computadoras de la red estarían expuestos a ataques desde el exterior. Esto
+					significa que la seguridad de toda la red, estaría dependiendo de que tan fácil fuera violar la seguridad local de cada maquina interna.
+					El Firewall es el punto ideal para monitorear la seguridad de la red y generar alarmas de intentos de ataque, el administrador será el responsable de la
+					revisión de estos monitoreos.
+					Otra causa que ha hecho que el uso de Firewalls se haya convertido en uso casi imperativo es el hecho que en los últimos años en Internet han entrado en
+					crisis el número disponible de direcciones IP, esto ha hecho que las intranets adopten direcciones sin clase, las cuales salen a Internet por medio de un
+					"traductor de direcciones", el cual puede alojarse en el Firewall.
+					Los Firewalls también son importantes desde el punto de vista de llevar las estadísticas del ancho de banda "consumido" por el trafico de la red, y que
+					procesos han influido más en ese trafico, de esta manera el administrador de la red puede restringir el uso de estos procesos y economizar o aprovechar
+					mejor el ancho de banda disponible.
+					Los Firewalls también tienen otros usos. Por ejemplo, se pueden usar para dividir partes de un sitio que tienen distintas necesidades de seguridad o para
+					albergar los servicios WWW y FTP brindados.
+					<h4>Limitaciones de un Firewall</h4>
+					La limitación más grande que tiene un Firewall sencillamente es el hueco que no se tapa y que coincidentemente o no, es descubierto por un intruso. Los
+					Firewalls no son sistemas inteligentes, ellos actúan de acuerdo a parámetros introducidos por su diseñador, por ende si un paquete de información no se
+					encuentra dentro de estos parámetros como una amenaza de peligro simplemente lo deja pasar. Más peligroso aún es que ese intruso deje Back Doors,
+					abriendo un hueco diferente y borre las pruebas o indicios del ataque original.
+					Otra limitación es que el Firewall "NO es contra humanos", es decir que si un intruso logra entrar a la organización y descubrir passwords o los huecos del
+					Firewall y difunde esta información, el Firewall no se dará cuenta.<br>
+					El Firewall tampoco provee de herramientas contra la filtración de software o archivos infectados con virus, aunque es posible dotar a la máquina, donde
+					se aloja el Firewall, de antivirus apropiados.
+					Finalmente, un Firewall es vulnerable, él NO protege de la gente que está dentro de la red interna. El Firewall trabaja mejor si se complementa con una
+					defensa interna. Como moraleja: "cuanto mayor sea el tráfico de entrada y salida permitido por el Firewall, menor será la resistencia contra los paquetes
+					externos. El único Firewall seguro (100%) es aquel que se mantiene apagado" <br><br>
 					<p><a href="../seguridad.html">Regresar a la pagina inicial</p></a>
 				</div>
 			</section>
