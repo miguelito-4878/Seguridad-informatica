@@ -14,12 +14,99 @@
 		<main>
 			<section id="informacion">
 				<div class="contenedor">
-					<h2>TEMA 3</h2>
+					<h2>ENCRIPTACION</h2>
 					<br>
-					<p align=justify><img src="img/img.jpg" align=left>eN LA SIGUIENTE SOPA DE
-					LETRAS ENCONTRARAS PALBRAS RELACIONADAS CON LA SEGURIDAD INFORMATICA, 
-					RIESGOS Y CONSECUENCIAS DE LA MALA PRACTICA DE LOS PROTOCOLOS Y MEDIDAS DE
-					SEGURIDAD AL MANUULAT INFORMACION.<br><br>
+					<p>Encriptación es el proceso mediante el cual cierta información o texto sin formato es cifrado de forma que el resultado sea ilegible
+					a menos que se conozca los datos necesarios para su interpretación. Es una medida de seguridad utilizada para que al momento de 
+					almacenar o transmitir información sensible ésta no pueda ser obtenida con facilidad por terceros.
+					Opcionalmente puede existir además un proceso de desencriptación a través del cuál la información puede ser interpretada de nuevo a su
+					estado original.
+					Aunque existen métodos de encriptación que no pueden ser revertidos.
+					El termino encriptación es traducción literal del inglés y no existe en el idioma español, la forma mas correcta de utilizar este término
+					sería Cifrado.<br>
+					<br><h3>Criptología</h3>
+					La encriptación como proceso forma parte de la criptología, ciencia que estudia los sistemas utilizados para ocultar información, 
+					La criptología es la ciencia que estudia la transformación de un determinado mensaje en un código de forma tal que a partir de dicho 
+					código solo algunas personas sean capaces de recuperar el mensaje original.<br>
+					<br><h3>Usos de las Encriptación</h3>
+					Algunos de los usos mas comunes de la encriptación son el almacenamiento y transmisión de información sensible como contraseñas, 
+					números de identificación legal, números de tarjetas crédito, reportes administrativos contables y conversaciones privadas, entre otros.<br>
+					<br><h3>Métodos de Encriptación</h3>
+					Para poder encriptar un dato, se pueden utilizar tres procesos matemáticos diferentes. Los algoritmos HASH, los simétricos y los 
+					asimétricos.<br>
+					<br><h3>Algoritmo HASH:</h3>
+					Este algoritmo efectúa un cálculo matemático sobre los datos que constituyen el documento y da como resultado un número único llamado
+					MAC.<br>
+					<br><h3>Criptografía de Clave Secreta o Simétrica</h3>
+					Utilizan una clave con la cual se encripta y desencripta el documento. Todo documento encriptado con una clave, deberá desencriptarse, en el proceso
+					inverso, con la misma clave, es importante destacar que la clave debería viajar con los datos, lo que hace arriesgada la operación, imposible de utilizar en
+					ambientes donde interactúan varios interlocutores.
+					Los Criptosistemas de clave secreta se caracterizan porque la clave de cifrado y de la descifrado es la misma, por tanto la robustez del algoritmo recae en
+					mantener el secreto de la misma.
+					Sus principales características son:
+					Rápidos
+					y fáciles de implementar
+					clave
+					de cifrado y descifrado son la misma
+					cada
+					par de usuarios tiene que tener una clave secreta compartida
+					una
+					comunicación en la que intervengan múltiples usuarios requiere de muchas claves secretas distintas.<br>
+					<br><h3>Algoritmos Asimétricos (RSA)</h3>
+					Requieren dos claves, una privada (única y personal, solo conocida por su dueño) y la otra llamada pública, ambas relacionadas por una fórmula
+					matemática compleja imposible de reproducir. El concepto de criptografía de clave pública fue introducido por Whitfield Diffie y Martin Hellman a fin de
+					solucionar la distribución de claves secretas de los sistemas tradicionales, mediante un canal inseguro. El usuario, ingresando su PIN genera clave
+					Publicas y Privadas necesarias. La clave publica podrá ser distribuida sin ningún inconveniente entre todos los <br>
+					<br><h3>Firma Digital:(RSA)</h3> 
+					La firma digital permite garantiza algunos conceptos de seguridad y son importantes al utilizar documentos en formato digital, tales como identidad o
+					autenticidad, integridad y no repudio. El modo de funcionamiento es similar a lo explicado para los algoritmos de encriptación , se utilizan también
+					algoritmos de clave pública, aplicados en dos etapas.
+					Ventajas ofrecidas por la firma Digital Integridad de la información: la integridad del documento es una protección contra la modificación de los datos en forma intencional o accidental.
+					El emisor protege el documento, incorporándole a ese un valor control de integridad, el receptor deberá efectuar el mismo cálculo sobre el
+					documento recibido y comparar el valor calculado con el enviado por el emisor.
+					Autenticidad del origen del mensaje: este aspecto de seguridad protege al receptor del documento, garantizándole que dicho mensaje ha sido
+					generado por la parte identificada en el documento como emisor del mismo, no pudiendo alguna otra entidad suplantar a un usuario del sistema.
+					No repudio del origen: el no repudio del origen protege al receptor del documento de la negación del emisor de haberlo enviado. Este aspecto de
+					seguridad es más fuerte que los anteriores ya que el emisor no puede negar bajo ninguna circunstancia que ha generado dicho mensaje ,
+					transformándose en un medio de prueba inequívoco respecto de la responsabilidad del usuario del sistema.<br>
+					<br><h3>Encriptar datos en un PDA.</h3>
+					La importancia de tener nuestros datos a salvo de miradas extrañas o tener un mínimo de privacidad se ha convertido en un tema muy importante. Los
+					PDAs son muchas veces usados como pequeñas oficinas portátiles donde se guardan datos de gran valor y donde es de gran importancia tener estos datos
+					protegidos. Muchos usuarios PDA por comodidad no protegen el acceso de inicio con una clave, imagínense en caso de pérdida del aparato o descuido
+					poder dejar estos datos confidenciales en manos ajenas a las nuestras. Para solucionar este problema o tener cierto grado de seguridad, es muy
+					importante poder encriptar nuestros datos.<br>
+					<br><h3>Encriptación de Ficheros:</h3> 
+					Windows XP profesional nos da una alternativa para poder proteger estos datos y prevenir su pérdida. El Encripting File System (EFS) en el encargado
+					de codificar los ficheros. Estod Ficheros solo se pueden leer cuando el usuario que los ha creado hace "logon" en su maquina (con lo cual,
+					presumiblemente, nuestra password será una pasword robusta). De hecho, cualquiera que acceda a nuestra máquina, no tendrá nunca acceso a nuestros
+					ficheros encriptados aunque sea un administrador del equipo.<br>
+					<br><h3>Tipos de Cifrados</h3>
+					Cifrado en otros nombre que se le da al proceso de encriptación. El propósito de un cifrado es tomar datos sin encriptar, llamado texto claro, y producir
+					una versión encriptada de los mismo. Existen dos clases de cifrad: Cifrado de Flujo de datos y Cifrado de bloques.Cifrado de flujo de datos: En el cifrado por flujo de datos encriptan un bit de texto en claro por vez. El ejemplo más simple de cifrado por flujo de datos
+					es el que consiste en combinar los datos, un bit a la vez, con otro bloque de datos llamado pad. Los cifrados por flujo de datos funcionan realmente bien
+					con datos en tiempo real como voz y video.
+					Cifrado por bloques: operan sobre bloques de tamaño mayor que un bit del texto en claro y producen un bloque de texto cifrado, generalmente los
+					bloques de salida son del mismo tamaño que los de la entrada. El tamaño del bloque debe ser lo suficientemente grande como para <br>
+					<br><h3>Autenticación</h3>
+					Este proceso, es otro método para mantener una comunicación seguro entre ordenadores. La autenticación es usada para verificar que la información
+					viene de una fuente de confianza. Básicamente, si la información es autentica, sabes quién la ha creado y que no ha sido alterada. La encriptación y la
+					autenticación, trabajan mano a mano para desarrollar un entorno seguro.
+					Hay varias maneras para autenticar a una persona o información en un ordenador:
+					<h3>Contraseñas</h3>
+					– El uso de un nombre de usuario y una contraseña provee el modo más común de autenticación. Esta información se introduce al
+					arrancar el ordenador o acceder a una aplicación. Se hace una comprobación contra un fichero seguro para confirmar que coinciden, y si es así, se
+					permite el acceso.
+					<h3>Tarjetas de acceso</h3>
+					– Estas tarjetas pueden ser sencillas como si de una tarjeta de crédito se tratara, poseyendo una banda magnética con la
+					información de autenticación. Las hay más sofisticadas en las que se incluye un chip digital con esta información.
+					<h3>Firma digital</h3>
+					– Básicamente, es una manera de asegurar que un elemento electrónico (email, archivo de texto, etc.) es autentico. Una de las
+					formas más conocidas es DSS (Digital Signature Standard) la cual está basada en un tipo de encriptación de clave pública la cual usa DSA (Digital
+					Signature Algorithm). El algoritmo DSA consiste en una clave privada, solo conocida por el que envía el documento (el firmante), y una clave
+					pública. Si algo es cambiado en el documento después de haber puesto la firma digital, cambia el valor contra lo que la firma digital hace la
+					comparación, invalidando la firma.
+					Recientemente, otros métodos de autenticación se están haciendo populares en varios medios que deben mantenerse seguros, como son el escaneo por
+					huellas, de retina, autenticación facial o identificación de voz.<br><br>
 					<p><a href="../seguridad.html">Regresar a la pagina inicial</p></a>
 				</div>
 			</section>
