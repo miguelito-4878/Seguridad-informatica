@@ -1,0 +1,121 @@
+/**
+* Wordfind.js 0.0.1
+* (c) 2012 Bill, BunKat LLC.
+* Wordfind is freely distributable under the MIT license.
+* For all details and documentation:
+*     http://github.com/bunkat/wordfind
+*/
+
+p {
+  font: 22pt sans-serif;
+  margin: 20px 20px 20px 20px;
+}
+
+/**
+* Estilo para la sopa de letras
+*/
+#juego {
+  border: 1px solid black;
+  padding: 20px;
+  float: left;
+  margin: 30px 20px;
+  
+  
+}
+
+#juego div {
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+/* Estilo para cada cuadrado en el puzzle */
+#juego .puzzleSquare {
+  height: 30px;
+  width: 30px;
+  text-transform: uppercase;
+  background-color: white;
+  border: 0;
+  font: 1em sans-serif;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* indicaciones cuando una palabra ha sido seleccionada*/
+#juego .selected {
+  background-color: orange;
+}
+
+/* Indicaciones que el cuadrado es parte de una palabra que ha sido encontrada*/ 
+#juego .found {
+  background-color: blue;
+  color: white;
+}
+
+#juego .solved {
+  background-color: purple;
+  color: white;
+}
+
+/* indica que todas las palabras han sido encontradas */
+#juego .complete {
+  background-color: green;
+}
+
+/**
+* Estilos para la lista de palabras
+*/
+#Palabras {
+  padding-top: 100px;
+  -moz-column-count: 1;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 1;
+  -webkit-column-gap: 20px;
+  column-count: 1;
+  column-gap: 20px;
+  width: 300px;
+}
+
+#Palabras ul {
+  list-style-type: none;
+}
+
+#Palabras li {
+  paPalabrasdding: 3px 0;
+  font: 1em sans-serif;
+}
+
+/* indicaciones que la palabra ha sido encontrada */
+#Palabras .wordFound {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/**
+* Estilos para el boton
+*/
+#solve {
+  margin: 0 30px;
+}
+
+.abtn {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #069;
+    border: 2px solid #EEE;
+    color: #FFF;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font: 14px/26px Arial, Helvetica, sans-serif;
+}
+
+.abtn:hover{
+	background-color: #036;
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	
+		<title>Sopa de letras</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+		<script type="text/javascript" src="./wordfind.js"></script> 
+		<script type="text/javascript" src="./wordfindgame.js"></script> 
+		
+</head>
+<body>
+	<main>
+		<section id="sopa">
+			<div class="contenedor">
+				<h2><center>SOPA DE LETRAS</center></h2>
+
+				<div id='juego'></div>
+				<div id='Palabras'></div>
+    
+				<div><button id='solve'>Resolver el juego</button></div>
+					<script>
+						var words = ['firewall','contraseña','backup','antivirus','panda','encriptación','correoelectronico'];
+						var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras'); 
+        
+						var puzzle = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});
+						wordfind.print(puzzle);   
+			
+						$('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+        
+					</script>
+							
+					
+					<!--
+					<a href="javascript:void(0)" onclick="document.getElementById('instructions_box').style.display='block'" class="abtn">¿Cómo se juega?</a>
+					-->
+					
+					
+					<br><br><br><br><br><br><br><br><br><br><br><br>
+					<p><a href="../../seguridad.html">Regresar a la pagina inicial</p></a>
+			</div>
+		</section>
+		
+	</main>
+    
+</body>
+</html>
